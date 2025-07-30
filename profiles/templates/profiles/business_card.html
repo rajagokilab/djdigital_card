@@ -1,0 +1,16 @@
+{% extends 'profiles/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="card text-center">
+    <img src="{% static 'profiles\profile.jpg' %}" class="card-img-top" alt="Profile Image">
+    <div class="card-body">
+        <h5 class="card-title">{{ user.name }}</h5>
+        <p class="card-text">{{ user.title }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Phone: {{ user.phone }}</p>
+        <p>Location: {{ user.location }}</p>
+    </div>
+</div>
+{% endblock %}
